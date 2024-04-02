@@ -1,0 +1,145 @@
+@import '_var';
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Playfair';
+    src: url('../fonts/playfair-display-black.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+  font-family: 'OpenSans','Playfair', sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.site {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+}
+
+p{
+  margin:0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+.section-header {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: $black;
+    margin-bottom: 26px;
+}
+
+.btn-trans {
+  display:flex;
+    justify-content: center;
+    align-items: center;
+  background-color: transparent;
+  padding: 17px 35px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: $primary;
+  border:2px solid $primary;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color .3s ease;
+}
+
+.btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    padding: 17px 35px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: $white;
+    border:2px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color .3s ease;
+  }
+
+.tippy-box[data-theme~='sdp-tooltip'] {
+  background-color: $black;
+  color: $white;
+  padding: 5px;
+  font-size: 9px;
+  line-height: 14px;
+  text-align: center;  
+}

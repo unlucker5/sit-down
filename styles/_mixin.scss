@@ -1,0 +1,23 @@
+@mixin column() {
+    display: flex;
+    flex-direction: column;
+  }
+
+@mixin pa() {
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+
+@mixin icon() {
+    content: '';
+    @include pa();
+    background-repeat: no-repeat;
+  }
+
+  @mixin wrap() {
+    display: flex;
+    flex-wrap: wrap;
+  }  

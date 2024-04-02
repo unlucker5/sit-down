@@ -1,0 +1,487 @@
+.grid {
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap:32px;
+}
+
+// rate 
+
+.rate {
+
+    &__grid {
+        grid-template-rows: 1fr 1fr;
+        min-height: 872px;
+        grid-template-areas:
+        "r-1 r-1 r-1 r-2 r-2 r-2 r-3 r-3 r-3 r-4 r-4 r-4"
+        "r-5 r-5 r-5 r-6 r-6 r-6 r-7 r-7 r-7 r-8 r-8 r-8";        
+
+        &-card {
+            &-1{
+                grid-area: r-1;
+            }
+            &-2{
+                grid-area: r-2;
+            }
+            &-3{
+                grid-area: r-3;
+            }
+            &-4{
+                grid-area: r-4;
+            }
+            &-5{
+                grid-area: r-5;
+            }
+            &-6{
+                grid-area: r-6;
+            }
+            &-7{
+                grid-area: r-7;
+            }
+            &-8{
+                grid-area: r-8;
+            }
+        }    
+    }
+}
+
+// top 
+
+.top {
+    &__grid {
+        // grid-template-rows: 511px 405px;
+        grid-template-rows: 1fr 405px;
+        grid-template-areas:
+        "t-1 t-1 t-1 t-1 t-1 t-1 t-2 t-2 t-2 t-2 t-2 t-2"
+        "t-3 t-3 t-3 t-3 t-4 t-4 t-4 t-4 t-5 t-5 t-5 t-5";        
+
+        &-card {
+            &-1{
+                grid-area:  t-1;
+            }
+            &-2{
+                grid-area:  t-2;
+            }
+            &-3{
+                grid-area:  t-3;
+            }
+            &-4{
+                grid-area:  t-4;
+            }
+            &-5{
+                grid-area: t-5;
+            }
+        }
+    }
+}
+
+// contacts 
+
+.contacts {
+    &__grid {
+        grid-template-rows: 1fr;
+        min-height: 400px;
+        grid-template-areas:
+        "c-1 c-1 c-1 c-1 c-1 c-1 c-2 c-2 c-2 c-2 c-2 c-2";
+        &-wrapper{
+            &-1{
+                grid-area:  c-1;
+            }
+            &-2{
+                grid-area:  c-2;
+            }
+        }
+    }
+}
+
+.catalog {
+   &__side {
+       grid-area: cat-s;
+   }
+   &__main {
+       grid-area: cat-m;
+   }
+   &__grid {
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "cat-s cat-s cat-s cat-m cat-m cat-m cat-m cat-m cat-m cat-m cat-m cat-m";           
+   }
+   &__wrapper {
+      &-card {
+          &-1 {
+              grid-area: cat-1;
+          }
+          &-2 {
+            grid-area: cat-2;
+        }
+        &-3 {
+            grid-area: cat-3;
+        }
+        &-4 {
+            grid-area: cat-4;
+        }
+        &-5 {
+            grid-area: cat-5;
+        }
+        &-6 {
+            grid-area: cat-6;
+        }
+        &-7 {
+            grid-area: cat-7;
+        }
+        &-8 {
+            grid-area: cat-8;
+        }
+        &-9 {
+            grid-area: cat-9;
+        }
+        &-10 {
+            grid-area: cat-10;
+        }
+        &-11 {
+            grid-area: cat-11;
+        }
+        &-12 {
+            grid-area: cat-12;
+        }
+        &-13 {
+            grid-area: cat-13;
+        }
+        &-14 {
+            grid-area: cat-14;
+        }
+        &-15 {
+            grid-area: cat-15;
+        }
+        &-16 {
+            grid-area: cat-16;
+        }
+        &-17 {
+            grid-area: cat-17;
+        }
+        &-18 {
+            grid-area: cat-18;
+        }
+      }
+      &-grid {
+        grid-template-columns: repeat(9, 1fr);  
+        grid-template-rows: repeat(3, 1fr);
+        &-1 {
+            grid-template-areas:
+            "cat-1 cat-1 cat-1 cat-2 cat-2 cat-2 cat-3 cat-3 cat-3"
+            "cat-4 cat-4 cat-4 cat-5 cat-5 cat-5 cat-6 cat-6 cat-6"
+            "cat-7 cat-7 cat-7 cat-8 cat-8 cat-8 cat-9 cat-9 cat-9";            
+        }   
+        &-2 {
+            grid-template-areas:
+            "cat-10 cat-10 cat-10 cat-11 cat-11 cat-11 cat-12 cat-12 cat-12"
+            "cat-13 cat-13 cat-13 cat-14 cat-14 cat-14 cat-15 cat-15 cat-15"
+            "cat-16 cat-16 cat-16 cat-17 cat-17 cat-17 cat-18 cat-18 cat-18";            
+        }       
+      }
+   } 
+}
+
+// product 
+
+.product {
+    
+    &__picture{
+        &-main {
+            grid-area: p-p-m;
+        }
+    }
+    &__secondary {
+        grid-area: p-sec;
+    }
+    &__descr {
+        grid-area: p-d;
+    }
+    &__scheme {
+        grid-area: p-sch;
+    }
+    &__name {
+        grid-area: p-n;
+    }
+    &__stats {
+        grid-area: p-sts;
+    }
+    &__grid { 
+        grid-template-rows: 245px 63px 1fr 113px;
+        grid-template-areas:
+            "p-p-m p-p-m p-p-m p-p-m p-p-m p-p-m p-n p-n p-n p-n p-n p-n"
+            "p-sec p-sec p-sec p-sec p-sec p-sec p-n p-n p-n p-n p-n p-n"
+            "p-d p-d p-d p-d p-d p-d p-sts p-sts p-sts p-sts p-sts p-sts"
+            "p-sch p-sch p-sch p-sch p-sch p-sch p-sts p-sts p-sts p-sts p-sts p-sts";
+    }
+}
+
+
+@media(max-width:1200px){
+    .grid {
+        grid-template-columns: repeat(9, 1fr);
+    }
+    
+    // rate 
+    
+    .rate {
+    
+        &__grid {
+            grid-template-areas:
+            "r-1 r-1 r-1 r-2 r-2 r-2 r-3 r-3 r-3"
+            "r-4 r-4 r-4 r-5 r-5 r-5 r-6 r-6 r-6";
+            &-card {
+
+                &-7{
+                    display: none;
+                }
+                &-8{
+                    display: none;
+                }
+            }        
+        }
+    }
+
+    // top
+
+    .top {
+        &__grid {
+            grid-template-rows: 1fr 1fr;
+            min-height: 1054px;
+            grid-template-areas:
+            "t-1 t-1 t-1 t-1 t-1 t-1 t-3 t-3 t-3"
+            "t-4 t-4 t-4 t-2 t-2 t-2 t-5 t-5 t-5";        
+        }
+    }
+
+    // contacts
+
+    .contacts {
+        &__grid {
+            min-height: 438px;
+            grid-template-areas:
+            "c-1 c-1 c-1 c-1 c-2 c-2 c-2 c-2 c-2";
+        }
+    }
+
+    .catalog {
+    
+        &__grid {
+     
+         grid-template-areas:
+         "cat-m cat-m cat-m cat-m cat-m cat-m cat-m cat-m cat-m";           
+        }
+
+        &__filter {
+
+
+            &-item {
+
+                &-1 {
+                 grid-area: cat-f-1;  
+                }
+                &-2 {
+                    grid-area: cat-f-2;  
+                   }
+                   &-3 {
+                    grid-area: cat-f-3;  
+                   }
+                   &-4 {
+                    grid-area: cat-f-4;  
+                   }
+                   &-5 {
+                    grid-area: cat-f-5;  
+                   }
+                  
+            }
+            grid-template-areas:"cat-f-1 cat-f-2 cat-f-2 cat-f-3 cat-f-3 cat-f-4 cat-f-4 cat-f-5 cat-f-5" ;
+            grid-template-rows: 1fr;
+        }
+        
+        }
+     
+        // product 
+
+        .product {
+            &__grid {
+                grid-template-rows: 203px 63px 1fr 113px;
+                grid-template-areas:
+                "p-p-m p-p-m p-p-m p-p-m p-p-m p-n p-n p-n p-n"
+                "p-sec p-sec p-sec p-sec p-sec p-n p-n p-n p-n"
+                "p-d p-d p-d p-d p-d p-sts p-sts p-sts p-sts"
+                "p-sch p-sch p-sch p-sch p-sch p-sts p-sts p-sts p-sts";                
+            }
+        }
+
+
+}
+
+@media(max-width:970px){
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    // rate 
+    
+    .rate {
+    
+        &__grid {
+            grid-template-rows: 1fr 1fr 1fr;
+            min-height: 1324px;
+            grid-template-areas:
+            "r-1 r-1 r-1 r-2 r-2 r-2"
+            "r-3 r-3 r-3 r-4 r-4 r-4"
+            "r-5 r-5 r-5 r-6 r-6 r-6";    
+        }
+    }   
+    
+    // top
+
+    .top {
+        &__grid {
+            grid-template-rows: 1fr 1fr 1fr;
+            min-height: 1597px;
+            grid-template-areas:
+            "t-1 t-1 t-1 t-1 t-1 t-1"
+            "t-3 t-3 t-3 t-2 t-2 t-2"
+            "t-4 t-4 t-4 t-5 t-5 t-5";
+
+        }
+    }
+
+    // contacts
+
+    .contacts {
+        &__grid {
+            grid-template-areas:
+            "c-1 c-1 c-1 c-1 c-2 c-2";
+        }
+    }
+
+    .catalog {
+        &__filter {
+
+            grid-template-areas:
+            "cat-f-1 . . . . ." 
+            "cat-f-2 cat-f-2 cat-f-3 cat-f-3 . ."
+            "cat-f-4 cat-f-4 cat-f-5 cat-f-5 . .";
+            grid-template-rows: 18px 1fr 1fr ;
+            gap:16px 32px;
+        }
+
+        &__wrapper{
+            &-grid {
+                &-3 {
+                    grid-template-areas:
+                    "cat-1 cat-1 cat-1 cat-2 cat-2 cat-2" 
+                    "cat-3 cat-3 cat-3 cat-4 cat-4 cat-4"
+                    "cat-5 cat-5 cat-5 cat-6 cat-6 cat-6";                    
+                }
+                &-4 {
+                    grid-template-areas:
+                    "cat-7 cat-7 cat-7 cat-8 cat-8 cat-8" 
+                    "cat-9 cat-9 cat-9 cat-10 cat-10 cat-10"
+                    "cat-11 cat-11 cat-11 cat-12 cat-12 cat-12";                    
+                }
+                &-5 {
+                    grid-template-areas:
+                    "cat-13 cat-13 cat-13 cat-14 cat-14 cat-14" 
+                    "cat-15 cat-15 cat-15 cat-16 cat-16 cat-16"
+                    "cat-17 cat-17 cat-17 cat-18 cat-18 cat-18";                    
+                }
+            }
+        }
+        
+        }
+
+         // product 
+
+         .product {
+            &__grid {
+                grid-template-rows:263px  331px 182px 110px 1fr;
+                grid-template-areas:
+                "p-p-m p-p-m p-p-m p-p-m p-p-m p-p-m"
+                "p-sec p-sec p-n p-n p-n p-n"
+                "p-d p-d p-d p-d p-d ."
+                "p-sch p-sch p-sch p-sch p-sch ."
+                "p-sts p-sts p-sts p-sts p-sts p-sts";                
+            }
+        }
+}
+
+@media(max-width:750px){
+    .product {
+        &__grid {
+            grid-template-rows:263px  331px 270px 110px 1fr;
+            grid-template-areas:
+            "p-p-m p-p-m p-p-m p-p-m p-p-m p-p-m"
+            "p-sec p-sec p-n p-n p-n p-n"
+            "p-d p-d p-d p-d p-d ."
+            "p-sch p-sch p-sch p-sch p-sch ."
+            "p-sts p-sts p-sts p-sts p-sts p-sts";                
+        }
+    }
+}
+
+
+
+@media(max-width:500px){
+    .grid {
+       grid-gap:16px;
+    }
+    
+    // rate 
+    
+    .rate {
+    
+        &__grid {
+            min-height: 866px;
+        }
+    }    
+
+       // top
+
+       .top {
+        &__grid {
+            grid-gap:32px 16px;
+            grid-template-rows: 332px 206px 206px;
+            min-height: 808px;
+        }
+    }
+    // contacts
+
+    .contacts {
+        &__grid {
+            grid-template-areas:
+            "c-1 c-1 c-1 c-1 c-1 c-1";
+            &-wrapper {
+                &-2 {
+                    display: none;
+                }
+            }
+        }
+    }
+    .catalog {
+        &__filter {
+
+            grid-template-areas:
+            "cat-f-1 cat-f-1 . . . ." 
+            "cat-f-2 cat-f-2 cat-f-2 cat-f-3 cat-f-3 cat-f-3"
+            "cat-f-4 cat-f-4 cat-f-4 cat-f-5 cat-f-5 cat-f-5";
+        }
+        }
+      // product 
+
+      .product {
+        &__grid {
+            grid-template-rows:135px 56px 249px 323px 80px 1fr; 
+            grid-template-areas:
+            "p-p-m p-p-m p-p-m p-p-m p-p-m p-p-m"
+            "p-sec p-sec p-sec p-sec p-sec p-sec"
+            "p-n p-n p-n p-n p-n p-n"
+            "p-d p-d p-d p-d p-d p-d"
+            "p-sch p-sch p-sch p-sch p-sch p-sch"
+            "p-sts p-sts p-sts p-sts p-sts p-sts";     
+                  
+        }
+    }   
+}

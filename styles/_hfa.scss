@@ -1,0 +1,460 @@
+*:focus-visible{
+    outline: none;
+}
+svg:focus{
+    outline: none;
+}
+
+.btn {
+    transition: background-color .3s ease, border-color .3s ease;
+    &:hover {
+        background-color: $primary_light;
+    }
+    &:focus {
+        background-color: $primary_light;
+        border-color: $primary_shade;
+    }
+    &:active {
+        background-color: $primary_shade;
+        border-color:transparent ;
+    }
+}
+.btn-trans {
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+    &:focus {
+        background-color: $primary_light;
+        border-color: $primary_shade;
+        color: $white;
+    }
+    &:active {
+        background-color: $primary_shade;
+        border-color:transparent ;
+        color: $white;
+    }
+    &:disabled {
+        background-color: $md_grey;
+        color: $grey;            
+    }
+}
+.header {
+
+    &__nav{
+        &-burger.close{
+            transition: background-color .3s ease;
+            &::before, &::after {
+                transition: background .3s ease;
+            }
+            &:focus {
+                background-color: $pink_violet;
+                &::before, &::after {
+                   background-color: $primary_shade;
+                }
+            }
+            &:active {
+                background-color: transparent;
+                &::before, &::after {
+                   background-color: $primary_shade;
+                }
+            }
+        }
+    }
+
+    &__form {
+        transition: background-color .3s ease, border-color .3s ease;
+        &:hover {
+            background-color: $md_grey;
+        }
+        &:focus {
+            border-color: $primary;
+            background-color: $pink_light;
+        }
+        &:active {
+            border-color: transparent;
+            background-color: $grey_light;            
+        }
+        &:active .header__search path {
+            fill: $primary;
+        }
+    }
+
+    &__list-link {
+        padding: 0 8px;
+        transition: color .3s ease, background-color .3s ease ;
+        &:hover{
+            color: $primary;
+        }
+        &:focus {
+            background-color:$pink_violet ;
+            color: $primary_shade;
+        }
+        &:active {
+            background-color:transparent ;
+            color: $primary_shade;            
+        }
+        &:disabled {
+            background-color: $md_grey;
+            color: $grey;            
+        }
+    }
+    &__nav-link {
+        padding: 0 8px;
+        transition: color .3s ease, background-color .3s ease ;
+        &:hover{
+            color: $primary;
+        }
+        &:focus {
+            background-color:$pink_violet ;
+            color: $black;
+        }
+        &:active {
+            background-color:transparent ;
+            color: $primary_shade;            
+        }
+    }
+    &__el-link {
+        transition: color .3s ease, background-color .3s ease;
+        &:hover {
+          color: $secondary_light;  
+          .header__el-link-svg {
+              
+              & path {
+                transition: fill .3s ease;
+                  fill: $secondary_light;
+              }
+          }
+        }
+        &:focus {
+            color: $secondary;
+            background-color: $bone;
+            .header__el-link-svg {   
+                & path {
+                    fill: $secondary;
+                }
+            }
+        }
+        &:active {
+            color: $secondary_shade;
+            background-color: transparent;
+            .header__el-link-svg {   
+                & path {
+                    fill: $secondary_shade;
+                }
+            }
+        }
+    }
+    &__personal {
+        &-cab {
+            transition: background-color .3s ease;
+            & svg path{
+                transition: fill .3s ease;
+            }
+            &:hover svg path{
+                fill: $primary_light;
+            }
+            &:focus{
+                background-color: $primary_light;
+            }
+            &:focus svg path{
+                fill: $white;
+            }
+            &:active {
+                background-color: transparent;
+            }
+            &:active svg path{
+                fill: $primary_shade;
+            }
+        }
+        &-cart {
+            transition: background-color .3s ease;
+            & svg path{
+                transition: fill .3s ease;
+            }
+            &:hover svg path{
+                fill: $primary_light;
+            }
+            &:focus{
+                background-color: $primary_light;
+            }
+            &:focus svg path{
+                fill: $white;
+            }
+            &:active {
+                background-color: transparent;
+            }
+            &:active svg path{
+                fill: $primary_shade;
+            }
+        }
+    }
+}
+
+.choices__inner {
+    transition: border-color .3s ease, background-color .3s ease;
+}
+
+.header__choice-2 {
+    &:hover .choices__inner{
+      border-color: $primary;  
+    }
+    &:focus .choices__inner{
+        border-color: $primary; 
+        background-color: $pink_light; 
+    }
+    &:active .choices__inner {
+        background-color: $white;
+        border-color:$primary_shade ;
+    }
+    
+}
+.header__choice-2.is-open .choices__inner{
+    background-color: $white;
+    border-color:$grey_light;
+}
+
+.arrow-next {
+    & path {
+        transition: stroke .3s ease;
+    }
+    & circle {
+        transition: stroke .3s ease;
+    }
+
+}
+
+.choices {
+    
+    transition: background-color .3s ease;
+    &::after {
+        transition: border-color .3s ease;
+    }
+    &__item {
+        transition: color .3s ease;
+    }
+    &:hover {
+        & .choices__item{
+     color: $primary_light;  
+        }
+       &::after {
+        border-color: $primary_light;
+       }
+    }
+    &:focus {
+        background-color: $pink_violet;
+        & .choices__item{
+     color: $primary_shade;  
+        }
+       &::after {
+        border-color: $primary_shade;
+       }
+       
+    }
+    &:focus {
+        background-color: transparent;
+        & .choices__item{
+        color: $primary_shade;  
+        }
+       &::after {
+        border-color: $primary_shade;
+       }
+       
+    }
+    &.is-open {
+        & .choices__item{
+            color: initial;  
+            }
+           &::after {
+            border-color: initial;
+           }  
+        & .choices__list--single>*{
+            color: $primary;
+        }    
+    }
+}
+
+.arrow-next {
+    & circle{
+        transition: stroke .3s ease, fill .3s ease;
+    }
+    & path {
+        transition: stroke .3s ease;
+    }
+    &:hover {
+        & circle {
+            fill:$primary;
+        }
+        & path {
+            stroke: $white;
+        }
+    }
+    &:focus {
+        & circle {
+            fill:$primary_light;
+            stroke: $primary;
+        }
+        & path {
+            stroke: $white;
+        } 
+    }
+    &:active {
+        & circle {
+            fill:$primary_shade;
+            stroke: $primary_shade;
+        }
+        & path {
+            stroke: $white;
+        } 
+    }
+}
+.arrow-prev {
+    & circle{
+        transition: stroke .3s ease, fill .3s ease;
+    }
+    & path {
+        transition: stroke .3s ease;
+    }
+    &:hover {
+        & circle {
+            fill:$primary;
+        }
+        & path {
+            stroke: $white;
+        }
+    }
+    &:focus {
+        & circle {
+            fill:$primary_light;
+            stroke: $primary;
+        }
+        & path {
+            stroke: $white;
+        } 
+    }
+    &:active {
+        & circle {
+            fill:$primary_shade;
+            stroke: $primary_shade;
+        }
+        & path {
+            stroke: $white;
+        } 
+    }
+   
+}
+
+.offer__swiper-button-next.swiper-button-disabled .arrow-next{
+    & circle {
+        fill:transparent;
+        stroke: $grey;
+    }
+    & path {
+        stroke: $grey;
+    }  
+}
+.offer__swiper-button-prev.swiper-button-disabled .arrow-prev{
+    & circle {
+        fill:transparent;
+        stroke: $grey;
+    }
+    & path {
+        stroke: $grey;
+    }  
+}
+
+.top {
+    &__link {
+       transition: color .3s ease, text-decoration .3s ease;
+      &:hover {
+          text-decoration: underline 2px;
+          text-underline-offset: 2px;
+          & .arrow-next {
+            & circle {
+                fill:$primary;
+            }
+            & path {
+                stroke: $white;
+            }
+          }
+      }
+      &:focus {
+        text-decoration: underline 2px;
+        text-underline-offset: 2px;
+        & .arrow-next {
+            & circle {
+                fill:$primary_light;
+                stroke: $primary;
+            }
+            & path {
+                stroke: $white;
+            } 
+        }
+    }
+    &:active {
+        color: $primary_shade;
+        text-decoration: underline 2px;
+        text-underline-offset: 2px;
+        & .arrow-next {
+            & circle {
+                fill:$primary_shade;
+                stroke: $primary_shade;
+            }
+            & path {
+                stroke: $white;
+            } 
+        }
+    }
+    }
+}
+
+.contacts {
+    &__input {
+        border:1px solid transparent ;
+        transition: border-color .3s ease, background-color .3s ease;
+        &:hover {
+            background-color: $md_grey;
+        }
+        &:focus {
+            background-color: $pink_light;
+            border-color: $primary;
+        }
+        &:active {
+            background-color: $grey_light;
+            border-color: $green_input;
+        }
+        &.just-validate-error-field {
+            background-color: $grey_light;
+            border-color: $red_input;
+        }
+    }
+}
+
+
+.footer {
+    &__social {
+        &-link {
+            transition: background-color .3s ease;
+            & svg path{
+                transition: fill .3s ease;
+            }   
+            &:hover svg path{
+                fill: $primary_light;
+            }
+             &:focus{
+                background-color: $primary_light;
+            }
+            &:focus svg path{
+                fill: $white;
+             }
+             &:active {
+                background-color: transparent;
+             }
+             &:active svg path{
+                 fill: $primary_shade;
+            }
+            
+        }
+    }
+}
