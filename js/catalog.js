@@ -26,7 +26,6 @@ $(document).ready(function(){
  });
 
  $(window).resize(function() {
-    /*If browser resized, check width again */
     if ($(window).width() <= 970) {
 	$('.catalog__wrapper-page-1').removeClass('active');
      $('.catalog__wrapper-page-3').addClass('active');

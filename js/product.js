@@ -1,15 +1,5 @@
 
 let form3 = document.getElementById("#modal3");
-// burger 
-
-// var burger = document.getElementById('burger');
-
-// var overlay = document.getElementById('burger__menu');
-
-// burger.addEventListener('click', function() {
-//   this.classList.toggle("close");
-//   overlay.classList.toggle("overlay");
-// });
 
 // modal
 $("#modal1").iziModal({
